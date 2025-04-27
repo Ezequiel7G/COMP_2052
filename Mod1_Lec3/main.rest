@@ -1,0 +1,7 @@
+GET   http://127.0.0.1:5000/info
+content-type: application/json
+
+{
+    "name": "Eliam",
+    "email": "eliamgerena5@gmail.com"
+}
