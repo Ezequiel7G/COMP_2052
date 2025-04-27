@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Lista de Tareas{% endblock %}
+
+{% block content %}
+<h2>Tareas Pendientes</h2>
+<ul>
+    {% for tarea in tareas %}
+    <li>{{ tarea }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

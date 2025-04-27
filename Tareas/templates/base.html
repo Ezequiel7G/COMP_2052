@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <meta charset="UTF-8">
+    <title>{% block title %}Mis Tareas{% endblock %}</title>
+</head>
+
+<body>
+    <h1>Mis Tareas </h1>
+    <nav>
+        <a href="/">Inicio</a> |
+        <a href="/tareas">Ver Tareas</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+
+</html>
