@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario</title>
+</head>
+
+<body>
+    <h1>Registro</h1>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+
+        <div>
+            {{ form.nombre.label }}<br>
+            {{ form.nombre(size=32) }}<br>
+            {% for error in form.nombre.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </div>
+
+        <div>
+            {{ form.correo.label }}<br>
+            {{ form.correo(size=32) }}<br>
+            {% for error in form.correo.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </div>
+
+        <div>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </div>
+
+        <div>
+            {{ form.submit() }}
+        </div>
+
+    </form>
+</body>
+
+</html>
